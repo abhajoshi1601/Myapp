@@ -1,0 +1,806 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f7f4ef;
+  color: #20201e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 90px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f4ef;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  letter-spacing: 5px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 35px;
+}
+
+.navbar nav a {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  opacity: 0.5;
+}
+
+.nav-button {
+  border: 1px solid #20201e;
+  padding: 12px 22px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  background: #20201e;
+  color: white;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: 45% 55%;
+  padding-left: 6%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 60px;
+}
+
+.small-heading,
+.section-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(65px, 7vw, 110px);
+  line-height: 0.88;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.hero h1 span {
+  display: block;
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 430px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #66615a;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #20201e;
+  color: white;
+  padding: 17px 28px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+}
+
+.text-button {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-image {
+  position: relative;
+  height: calc(100vh - 90px);
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.03);
+}
+
+.image-label {
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.image-label span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+}
+
+.image-label p {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+  padding: 150px 12%;
+  text-align: center;
+}
+
+.intro h2 {
+  max-width: 850px;
+  margin: auto;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(45px, 5vw, 75px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.intro h2 i {
+  font-weight: 400;
+}
+
+.intro-text {
+  max-width: 600px;
+  margin: 40px auto 0;
+  font-size: 13px;
+  line-height: 2;
+  color: #706c65;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding: 100px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  align-items: center;
+}
+
+.about-image {
+  height: 650px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.8s;
+}
+
+.about-image:hover img {
+  transform: scale(1.04);
+}
+
+.about-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(50px, 5vw, 72px);
+  line-height: 0.95;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.about-content h2 i {
+  font-weight: 400;
+}
+
+.about-content > p {
+  font-size: 13px;
+  line-height: 2;
+  color: #66615a;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.stats {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.stats span {
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+/* =========================
+   COLLECTIONS
+========================= */
+
+.collections {
+  padding: 150px 8%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 65px;
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.section-header h2 i {
+  font-weight: 400;
+}
+
+.section-header > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.collection-card:nth-child(2) {
+  margin-top: 80px;
+}
+
+.collection-image {
+  height: 620px;
+  overflow: hidden;
+  position: relative;
+}
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.8s;
+}
+
+.collection-card:hover .collection-image img {
+  transform: scale(1.05);
+}
+
+.collection-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.collection-overlay span {
+  background: white;
+  padding: 15px 22px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.collection-card:hover .collection-overlay {
+  opacity: 1;
+}
+
+.collection-info {
+  padding-top: 20px;
+}
+
+.collection-info span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.collection-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  padding: 120px 8%;
+  background: #e9e3da;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.services-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 70px;
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.services-heading h2 i {
+  font-weight: 400;
+}
+
+.services-list {
+  border-top: 1px solid #bbb4aa;
+}
+
+.service {
+  min-height: 150px;
+  border-bottom: 1px solid #bbb4aa;
+  display: grid;
+  grid-template-columns: 70px 1fr 40px;
+  align-items: center;
+  gap: 20px;
+  transition: 0.3s;
+}
+
+.service:hover {
+  padding-left: 15px;
+}
+
+.service-number {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+}
+
+.service h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.service p {
+  max-width: 450px;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #66615a;
+}
+
+.service-arrow {
+  font-size: 22px;
+}
+
+/* =========================
+   LOOKBOOK
+========================= */
+
+.lookbook {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  min-height: 700px;
+}
+
+.lookbook-content {
+  padding: 100px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lookbook-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 70px;
+  line-height: 0.9;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.lookbook-content h2 i {
+  font-weight: 400;
+}
+
+.lookbook-content > p:not(.section-label) {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #777;
+  max-width: 400px;
+  margin-bottom: 35px;
+}
+
+.lookbook-image {
+  overflow: hidden;
+}
+
+.lookbook-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  padding: 150px 8%;
+  background: #20201e;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+
+.contact .section-label {
+  color: #aaa;
+}
+
+.contact h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(55px, 6vw, 85px);
+  line-height: 0.9;
+  font-weight: 400;
+}
+
+.contact h2 i {
+  font-weight: 400;
+}
+
+.contact-text {
+  margin-top: 40px;
+  max-width: 450px;
+  font-size: 13px;
+  line-height: 2;
+  color: #aaa;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-details > a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  transition: 0.3s;
+}
+
+.contact-details > a:hover {
+  opacity: 0.6;
+}
+
+.contact-details > p {
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.social-links a {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #20201e;
+  border-top: 1px solid #444;
+  color: white;
+  padding: 35px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  letter-spacing: 4px;
+}
+
+footer p,
+footer a {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #999;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
+  .hero-content {
+    padding: 100px 7%;
+    min-height: 600px;
+  }
+
+  .hero-image {
+    height: 650px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-image {
+    height: 550px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .collection-image {
+    height: 600px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .lookbook {
+    grid-template-columns: 1fr;
+  }
+
+  .lookbook-content {
+    min-height: 550px;
+  }
+
+  .lookbook-image {
+    height: 600px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 75px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .nav-button {
+    padding: 10px 15px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    min-height: 550px;
+    padding: 80px 7%;
+  }
+
+  .hero h1 {
+    font-size: 65px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .hero-image {
+    height: 550px;
+  }
+
+  .intro {
+    padding: 100px 8%;
+  }
+
+  .intro h2 {
+    font-size: 48px;
+  }
+
+  .about {
+    padding: 70px 7%;
+  }
+
+  .about-image {
+    height: 450px;
+  }
+
+  .about-content h2 {
+    font-size: 52px;
+  }
+
+  .stats {
+    gap: 20px;
+  }
+
+  .stats strong {
+    font-size: 30px;
+  }
+
+  .stats span {
+    font-size: 8px;
+  }
+
+  .collections {
+    padding: 90px 7%;
+  }
+
+  .section-header {
+    display: block;
+  }
+
+  .section-header h2 {
+    font-size: 52px;
+    margin-bottom: 25px;
+  }
+
+  .collection-image {
+    height: 500px;
+  }
+
+  .services {
+    padding: 90px 7%;
+  }
+
+  .services-heading h2 {
+    font-size: 55px;
+  }
+
+  .service {
+    grid-template-columns: 40px 1fr 20px;
+  }
+
+  .service h3 {
+    font-size: 27px;
+  }
+
+  .lookbook-content {
+    padding: 80px 7%;
+  }
+
+  .lookbook-content h2 {
+    font-size: 55px;
+  }
+
+  .lookbook-image {
+    height: 500px;
+  }
+
+  .contact {
+    padding: 100px 7%;
+  }
+
+  .contact h2 {
+    font-size: 55px;
+  }
+
+  .contact-details > a {
+    font-size: 27px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
